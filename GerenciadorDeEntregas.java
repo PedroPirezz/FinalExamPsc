@@ -36,6 +36,7 @@ public class GerenciadorDeEntregas {
             System.out.println("Entregas salvas com sucesso.");
         } catch (IOException e) {
             System.out.println("Erro ao salvar entregas: " + e.getMessage());
+            Logger.registrarErro("Erro ao salvar entregas: " + e.getMessage());
         }
     }
 
@@ -51,9 +52,10 @@ public class GerenciadorDeEntregas {
             System.out.println("Entregas carregadas com sucesso.");
         } catch (FileNotFoundException e) {
             System.out.println("Arquivo de entregas não encontrado. Um novo arquivo será criado.");
+            Logger.registrarErro("Arquivo de entregas não encontrado: " + e.getMessage());
         } catch (IOException e) {
             System.out.println("Erro ao carregar entregas: " + e.getMessage());
+            Logger.registrarErro("Erro ao carregar entregas: " + e.getMessage());
         }
     }
 }
-
