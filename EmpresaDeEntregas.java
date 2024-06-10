@@ -15,7 +15,7 @@ public class EmpresaDeEntregas {
             System.out.println("3. Sair");
             System.out.print("Escolha uma opção: ");
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpa o buffer do scanner
+            scanner.nextLine(); 
             
             switch(opcao) {
                 case 1:
